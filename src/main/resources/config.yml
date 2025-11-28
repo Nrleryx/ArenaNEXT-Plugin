@@ -1,0 +1,17 @@
+settings:
+  default-language: en
+  use-mysql: false
+
+mysql:
+  host: localhost
+  port: 3306
+  database: arenanext
+  username: root
+  password: password
+
+arena:
+  default-countdown: 10
+  min-players: 2
+  max-players: 16
+  spectator-enabled: true
+

@@ -1,0 +1,58 @@
+name: ArenaNext
+version: '${project.version}'
+main: com.nrleryx.arenanext.ArenaNextPlugin
+api-version: 1.20
+author: NrleryxDev
+description: Advanced Arena Management System for Minecraft
+website: https://github.com/Nrleryx/ArenaNext
+
+commands:
+  arena:
+    description: Main arena command
+    aliases: [an, arenanext]
+    usage: /<command> [subcommand]
+    permission: arenanext.use
+  arenanext:
+    description: Main arena command (alternative)
+    aliases: [an]
+    usage: /<command> [subcommand]
+    permission: arenanext.use
+
+permissions:
+  arenanext.*:
+    description: All ArenaNext permissions
+    default: op
+    children:
+      arenanext.use: true
+      arenanext.join: true
+      arenanext.leave: true
+      arenanext.spectate: true
+      arenanext.admin: true
+      arenanext.admin.create: true
+      arenanext.admin.delete: true
+      arenanext.admin.reload: true
+  arenanext.use:
+    description: Use basic arena commands
+    default: true
+  arenanext.join:
+    description: Join arenas
+    default: true
+  arenanext.leave:
+    description: Leave arenas
+    default: true
+  arenanext.spectate:
+    description: Spectate matches
+    default: true
+  arenanext.admin:
+    description: Admin access
+    default: op
+  arenanext.admin.create:
+    description: Create arenas
+    default: op
+  arenanext.admin.delete:
+    description: Delete arenas
+    default: op
+  arenanext.admin.reload:
+    description: Reload plugin
+    default: op
+
