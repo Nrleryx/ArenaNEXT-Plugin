@@ -1,15 +1,17 @@
 package com.nrleryx.arenanext;
 
+import com.nrleryx.arenanext.config.ConfigManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ArenaNextPlugin extends JavaPlugin {
 
     private static ArenaNextPlugin instance;
+    private ConfigManager configManager;
 
     @Override
     public void onEnable() {
         instance = this;
-        saveDefaultConfig();
+        configManager = new ConfigManager(this);
         getLogger().info("ArenaNext has been enabled!");
     }
 
@@ -20,6 +22,10 @@ public final class ArenaNextPlugin extends JavaPlugin {
 
     public static ArenaNextPlugin getInstance() {
         return instance;
+    }
+
+    public ConfigManager getConfigManager() {
+        return configManager;
     }
 }
 

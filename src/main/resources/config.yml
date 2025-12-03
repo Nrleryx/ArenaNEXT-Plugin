@@ -1,5 +1,4 @@
 settings:
-  default-language: en
   use-mysql: false
 
 mysql:
