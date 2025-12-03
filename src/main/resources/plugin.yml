@@ -1,5 +1,5 @@
 name: ArenaNext
-version: '${project.version}'
+version: '${v.1..0.0}'
 main: com.nrleryx.arenanext.ArenaNextPlugin
 api-version: 1.20
 author: NrleryxDev
@@ -13,7 +13,7 @@ commands:
     usage: /<command> [subcommand]
     permission: arenanext.use
   arenanext:
-    description: Main arena command (alternative)
+    description: Main arena command 
     aliases: [an]
     usage: /<command> [subcommand]
     permission: arenanext.use
